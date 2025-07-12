@@ -20,16 +20,34 @@
                 <h1>LOGIN</h1>
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                   <input type="text" name="usuario" placeholder="Usuário" id="login-input">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                   <input type="password" name="senha" placeholder="Senha" id="senha-input">
                 </div>
-                <button class="btn-login">Login</button>
+                <button class="btn-login" onclick="logar()"; return false>Login</button>
             </div>
         </div>
     </div>
+
+<script>
+   function logar(){
+    
+    var login = document.getElementById('login-input').value;
+   var senha = document.getElementById('senha-input').value;
+
+    if(login == "admin" && senha == "admin"){
+        alert("você entrou");
+        location.href = "home.html";
+    }else{
+        alert("senha ou usuario incorreto");
+    }
+   }
+</script>
+
+
+
 </body>
 
 </html>
